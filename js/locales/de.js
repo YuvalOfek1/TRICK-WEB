@@ -10,6 +10,9 @@ export default {
   noText: 'Kein zusätzlicher Text',
   noteCount: (n) => `${n} Notizen`,
   noteDate: (date, time) => `${date} um ${time}`,
+  // Samsung Notes disguise (Android)
+  samsungAllNotes: 'Alle Notizen',
+  samsungNoteCount: (n) => (n === 1 ? '1 Notiz' : `${n} Notizen`),
 
   done: 'Fertig',
   close: 'Schließen',

@@ -539,3 +539,106 @@ button.set-row:active { opacity: 1; background: var(--separator); transition: no
   font: inherit;
   font-weight: 600;
 }
+
+/* ---------- Samsung Notes disguise (Android; html.skin-samsung, set in index.html) ---------- */
+.samsung-only { display: none !important; }
+.skin-samsung .ios-only { display: none !important; }
+.skin-samsung .samsung-only { display: revert !important; }
+.skin-samsung .nav-right.samsung-only { display: flex !important; }
+
+.skin-samsung {
+  --bg: #f6f6f6;
+  --note-bg: #ffffff;
+  --text: #1a1a1a;
+  --secondary: #777777;
+  --card: #ffffff;
+  --card-line: #e6e6e6;
+  --icon: #262626;
+  --accent: #f26b1d;
+}
+@media (prefers-color-scheme: dark) {
+  .skin-samsung {
+    --bg: #000000;
+    --note-bg: #000000;
+    --text: #fafafa;
+    --secondary: #9a9a9a;
+    --card: #1e1e1e;
+    --card-line: #2b2b2b;
+    --icon: #f2f2f2;
+  }
+}
+.skin-samsung body { font-family: "SamsungOne", "Samsung Sans", system-ui, Roboto, sans-serif; -webkit-font-smoothing: auto; }
+.skin-samsung .screen { background: var(--bg); }
+.skin-samsung #note-screen { background: var(--note-bg); }
+/* Android has no edge shadow on screen transitions */
+.skin-samsung #note-screen::before { display: none; }
+
+.skin-samsung .list-nav, .skin-samsung .note-nav { padding: calc(var(--safe-top) + 8px) 12px 8px; min-height: calc(var(--safe-top) + 56px); }
+.skin-samsung .nav-icon { width: 40px; height: 40px; align-items: center; justify-content: center; color: var(--icon); }
+.skin-samsung .nav-icon svg { width: 24px; height: 24px; stroke-width: 1.7; }
+.skin-samsung .nav-right { gap: 4px; }
+.skin-samsung .nav-back { color: var(--icon); padding: 8px; }
+
+/* One UI's expanded header: a big title with the note count, low on the screen */
+.skin-samsung .large-title {
+  margin: 14vh 24px 2px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--text);
+}
+.skin-samsung .samsung-count { margin: 0 24px 26px; font-size: 15px; color: var(--secondary); }
+
+.skin-samsung .card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 14px;
+  padding: 0 18px;
+}
+.skin-samsung .cell.card { padding: 0; color: var(--text); background: none; }
+.skin-samsung .cell.card::before { display: none; }
+.skin-samsung .cell.card:active, .skin-samsung .cell.card.selected { background: none; opacity: 0.6; }
+.skin-samsung .card-thumb {
+  aspect-ratio: 1 / 1.1;
+  padding: 12px 12px 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--card);
+  border: 1px solid var(--card-line);
+  font-size: 9.5px;
+  line-height: 1.45;
+  color: var(--text);
+  text-align: start;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-mask-image: linear-gradient(to bottom, #000 75%, transparent);
+  mask-image: linear-gradient(to bottom, #000 75%, transparent);
+}
+.skin-samsung .card-thumb > div { overflow: hidden; text-overflow: ellipsis; }
+.skin-samsung .card .cell-title { margin-top: 8px; font-size: 15px; font-weight: 600; text-align: start; }
+.skin-samsung .card-date { margin-top: 1px; font-size: 12px; color: var(--secondary); text-align: start; }
+.skin-samsung .list-bottom-pad { height: 110px; }
+
+.skin-samsung .fab {
+  position: absolute;
+  inset-inline-end: 22px;
+  bottom: calc(var(--safe-bottom) + 26px);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+}
+.skin-samsung .fab.samsung-only { display: flex !important; }
+.skin-samsung .fab svg { width: 26px; height: 26px; stroke-width: 1.9; }
+
+/* An open note: title, then the text; no date line, no bottom toolbar */
+.skin-samsung .note-scroll { padding: 6px 22px 0; }
+.skin-samsung .note-date { display: none; }
+.skin-samsung .note-body { font-size: 17px; line-height: 1.55; }
+.skin-samsung .note-body h2 { font-size: 22px; font-weight: 600; margin: 4px 0 14px; }
+.skin-samsung .note-body ol li::before { min-width: 1.9em; text-align: start; padding-inline-end: 0.2em; }
+.skin-samsung .caret { background: var(--accent); }

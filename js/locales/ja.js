@@ -10,6 +10,9 @@ export default {
   noText: '追加テキストなし',
   noteCount: (n) => `${n}件のメモ`,
   noteDate: (date, time) => `${date} ${time}`,
+  // Samsung Notes disguise (Android)
+  samsungAllNotes: 'すべてのノート',
+  samsungNoteCount: (n) => `${n}件のノート`,
 
   done: '完了',
   close: '閉じる',

@@ -10,6 +10,9 @@ export default {
   noText: '추가 텍스트 없음',
   noteCount: (n) => `메모 ${n}개`,
   noteDate: (date, time) => `${date} ${time}`,
+  // Samsung Notes disguise (Android)
+  samsungAllNotes: '모든 노트',
+  samsungNoteCount: (n) => `노트 ${n}개`,
 
   done: '완료',
   close: '닫기',

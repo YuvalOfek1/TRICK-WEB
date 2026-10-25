@@ -9,6 +9,10 @@ const ASSETS = [
   'manifest.webmanifest',
   'icons/icon-180.png',
   'icons/icon-512.png',
+  'manifest-samsung.webmanifest',
+  'icons/samsung-192.png',
+  'icons/samsung-512.png',
+  'icons/samsung-maskable-512.png',
 ];
 
 self.addEventListener('install', (event) => {

@@ -1,8 +1,10 @@
 # Foldwise (web)
 
 The Foldwise magic tricks as a private web app, for the owner and friends: everything unlocked, no
-store, no purchases. It looks exactly like the iPhone Notes app (name and icon included), so it can
-be added to the home screen as a disguise. The store apps live in the
+store, no purchases. It copies the phone's own notes app, name and icon included, so it can be added
+to the home screen as a disguise: **iPhone Notes** on iPhone, **Samsung Notes** (One UI 7, Galaxy S25)
+on Android. Add `?skin=samsung` or `?skin=ios` to the address to force one (remembered by the
+browser), for example to preview the Android look on an iPhone. The store apps live in the
 [DFB](https://github.com/YuvalOfek1/DFB) repo; this repo is a copy of their web code.
 
 **Site:** https://yuvalofek1.github.io/DFB-WEB/
@@ -19,7 +21,8 @@ not real security: the site's files are public. Without the secret there is no p
 
 ## Using it
 
-Open the site in Safari, then Share → **Add to Home Screen**. It opens full screen and works
+On iPhone open the site in Safari, then Share → **Add to Home Screen**. On Android open it in
+Chrome, then ⋮ → **Add to Home screen** / **Install app** (it installs as "Samsung Notes"). It opens full screen and works
 offline. Long-press the big "Notes" title to open Setup: lists, force words, language, how to
 perform.
 

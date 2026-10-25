@@ -7,6 +7,8 @@ import { createSetup } from './setup.js';
 import * as purchases from './purchases.js';
 
 const LONG_PRESS_MS = 700;
+// Which notes app the disguise copies (set in index.html): Samsung Notes on Android, else iPhone Notes.
+const SAMSUNG = document.documentElement.classList.contains('skin-samsung');
 
 const $ = (id) => document.getElementById(id);
 
@@ -19,7 +21,7 @@ let shownWords = []; // what that list currently displays (changes when a force 
 
 let locale = 'en';
 let decoys = [];
-let timeFmt, weekdayFmt, shortFmt, longFmt;
+let timeFmt, weekdayFmt, shortFmt, longFmt, dayMonthFmt;
 
 // A language tag Intl accepts, or the fallback (some systems report tags like "en-US@posix").
 function validLocale(tag, fallback) {
@@ -47,6 +49,8 @@ function applyLocale() {
   weekdayFmt = new Intl.DateTimeFormat(dateLocale, { weekday: 'long' });
   shortFmt = new Intl.DateTimeFormat(dateLocale, { year: base === 'ja' ? 'numeric' : '2-digit', month: 'numeric', day: 'numeric' });
   longFmt = new Intl.DateTimeFormat(dateLocale, { dateStyle: 'long' });
+  dayMonthFmt = new Intl.DateTimeFormat(dateLocale, { day: 'numeric', month: 'short' });
+  if (SAMSUNG) $('folder-title').textContent = t('samsungAllNotes');
 }
 
 // ---------- Dates (mimic Notes' labels) ----------
@@ -96,8 +100,29 @@ function el(tag, className, text) {
   return node;
 }
 
+// Samsung Notes: a grid of note cards (a preview of the note) with the title and date underneath.
+function renderSamsungList(notes) {
+  const container = $('note-groups');
+  container.replaceChildren();
+  const grid = el('div', 'card-grid');
+  for (const note of notes) {
+    const cell = el('button', 'cell card');
+    cell.type = 'button';
+    const thumb = el('div', 'card-thumb');
+    const lines = note.list ? note.list.items.slice(0, 9).map((item, i) => `${i + 1}. ${item}`) : note.lines.filter(Boolean).slice(0, 9);
+    for (const line of lines) thumb.append(el('div', null, line));
+    const date = note.daysAgo === 0 ? timeFmt.format(note.date) : dayMonthFmt.format(note.date);
+    cell.append(thumb, el('div', 'cell-title', note.title), el('div', 'card-date', date));
+    cell.addEventListener('click', () => openNote(note, cell));
+    grid.append(cell);
+  }
+  container.append(grid, el('div', 'list-bottom-pad'));
+  $('samsung-count').textContent = t('samsungNoteCount', notes.length);
+}
+
 function renderList() {
   const notes = allNotes();
+  if (SAMSUNG) return renderSamsungList(notes);
   const buckets = [
     [t('today'), notes.filter((n) => n.daysAgo === 0)],
     [t('previous7'), notes.filter((n) => n.daysAgo > 0 && n.daysAgo <= 7)],

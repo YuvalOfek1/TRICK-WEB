@@ -5,7 +5,7 @@ import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { build } from 'esbuild';
 
 const OUT = 'www';
-const STATIC = ['index.html', 'styles.css', 'manifest.webmanifest', 'robots.txt', 'icons', 'media'];
+const STATIC = ['index.html', 'styles.css', 'manifest.webmanifest', 'manifest-samsung.webmanifest', 'robots.txt', 'icons', 'media'];
 
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT);

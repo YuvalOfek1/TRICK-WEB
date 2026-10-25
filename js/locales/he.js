@@ -15,6 +15,9 @@ export default {
   noText: 'אין טקסט נוסף',
   noteCount: (n) => `${n} פתקים`,
   noteDate: (date, time) => `${date} בשעה ${time}`,
+  // Samsung Notes disguise (Android)
+  samsungAllNotes: 'כל הפתקים',
+  samsungNoteCount: (n) => (n === 1 ? 'פתק אחד' : `${n} פתקים`),
 
   done: 'סיום',
   close: 'סגירה',
