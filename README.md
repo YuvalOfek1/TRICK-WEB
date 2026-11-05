@@ -5,7 +5,7 @@ store, no purchases. It copies the phone's own notes app, name and icon included
 to the home screen as a disguise: **iPhone Notes** on iPhone, **Samsung Notes** (One UI 7, Galaxy S25)
 on Android. Add `?skin=samsung` or `?skin=ios` to the address to force one (remembered by the
 browser), for example to preview the Android look on an iPhone. The store apps live in the
-[DFB](https://github.com/YuvalOfek1/DFB) repo; this repo is a copy of their web code.
+[foldwise](https://github.com/YuvalOfek1/foldwise-app) repo; this repo is a copy of their web code.
 
 **Site:** https://yuvalofek1.github.io/DFB-WEB/
 
