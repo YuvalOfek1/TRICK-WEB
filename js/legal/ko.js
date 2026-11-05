@@ -30,7 +30,7 @@ export default {
       ['준거법',
         '본 약관은 이스라엘 국가의 법률을 따르며, 이용자가 거주하는 국가의 강행적 소비자 보호 규정에는 영향을 미치지 않습니다.'],
       ['문의',
-        'Yuval Ofek · yuvalofek97@gmail.com'],
+        'Yuval Ofek · foldwisemagic@gmail.com'],
     ],
   },
   privacy: {
@@ -38,7 +38,7 @@ export default {
     summary: '요약: Foldwise에는 계정, 광고, 분석, 추적이 없습니다. 목록과 설정은 휴대폰에 저장됩니다. 외부로 전송되는 데이터는 구매를 처리하고 확인하는 데 필요한 데이터뿐입니다.',
     sections: [
       ['운영자',
-        'Foldwise는 Yuval Ofek(이하 "당사")가 만든 마술 앱입니다. 개인정보에 관한 질문이나 요청은 yuvalofek97@gmail.com으로 보내 주세요.'],
+        'Foldwise는 Yuval Ofek(이하 "당사")가 만든 마술 앱입니다. 개인정보에 관한 질문이나 요청은 foldwisemagic@gmail.com으로 보내 주세요.'],
       ['휴대폰에만 저장되는 데이터',
         'Foldwise는 다음 데이터를 이용자의 기기에만 저장하며, 당사나 다른 누구에게도 보내지 않습니다.',
         [
@@ -75,7 +75,7 @@ export default {
       ['변경',
         '본 방침이 변경되면 방침과 시행일을 업데이트합니다. 중요한 변경 사항은 앱 또는 스토어 페이지에서도 알려 드립니다.'],
       ['문의',
-        'Yuval Ofek · yuvalofek97@gmail.com'],
+        'Yuval Ofek · foldwisemagic@gmail.com'],
     ],
   },
 };

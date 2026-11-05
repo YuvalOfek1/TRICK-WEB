@@ -30,7 +30,7 @@ export default {
       ['Ley aplicable',
         'Estas condiciones se rigen por las leyes del Estado de Israel, sin perjuicio de las protecciones obligatorias al consumidor del país en el que vives.'],
       ['Contacto',
-        'Yuval Ofek · yuvalofek97@gmail.com'],
+        'Yuval Ofek · foldwisemagic@gmail.com'],
     ],
   },
   privacy: {
@@ -38,7 +38,7 @@ export default {
     summary: 'En resumen: Foldwise no tiene cuentas, anuncios, analíticas ni seguimiento. Tus listas y ajustes se quedan en tu móvil. Los únicos datos que salen de él son los necesarios para procesar y confirmar tu compra.',
     sections: [
       ['Quiénes somos',
-        'Foldwise es una app de trucos de magia creada por Yuval Ofek («nosotros»). Para cualquier pregunta o solicitud sobre privacidad, escribe a yuvalofek97@gmail.com.'],
+        'Foldwise es una app de trucos de magia creada por Yuval Ofek («nosotros»). Para cualquier pregunta o solicitud sobre privacidad, escribe a foldwisemagic@gmail.com.'],
       ['Datos que se quedan en tu móvil',
         'Foldwise guarda estos datos solo en tu dispositivo y nunca los envía ni a nosotros ni a nadie:',
         [
@@ -75,7 +75,7 @@ export default {
       ['Cambios',
         'Si esta política cambia, la actualizaremos junto con su fecha de entrada en vigor. Los cambios importantes también se indicarán en la app o en su ficha de la tienda.'],
       ['Contacto',
-        'Yuval Ofek · yuvalofek97@gmail.com'],
+        'Yuval Ofek · foldwisemagic@gmail.com'],
     ],
   },
 };

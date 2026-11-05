@@ -30,7 +30,7 @@ export default {
       ['準拠法',
         '本規約はイスラエル国の法律に準拠します。ただし、お客様がお住まいの国の強行的な消費者保護規定には影響しません。'],
       ['お問い合わせ',
-        'Yuval Ofek · yuvalofek97@gmail.com'],
+        'Yuval Ofek · foldwisemagic@gmail.com'],
     ],
   },
   privacy: {
@@ -38,7 +38,7 @@ export default {
     summary: '概要:Foldwiseには、アカウント、広告、分析、トラッキングがありません。リストや設定はスマホ内に保存されます。外部に送られるのは、購入の処理と確認に必要なデータだけです。',
     sections: [
       ['運営者',
-        'Foldwiseは、Yuval Ofek(以下「当方」)が作成したマジックアプリです。プライバシーに関するご質問やご依頼は、yuvalofek97@gmail.com までご連絡ください。'],
+        'Foldwiseは、Yuval Ofek(以下「当方」)が作成したマジックアプリです。プライバシーに関するご質問やご依頼は、foldwisemagic@gmail.com までご連絡ください。'],
       ['スマホ内にとどまるデータ',
         'Foldwiseは以下のデータをお客様のデバイス内にのみ保存し、当方を含め誰にも送信しません:',
         [
@@ -75,7 +75,7 @@ export default {
       ['変更',
         '本ポリシーを変更する場合は、ポリシーと発効日を更新します。重要な変更は、アプリ内またはストアのページでもお知らせします。'],
       ['お問い合わせ',
-        'Yuval Ofek · yuvalofek97@gmail.com'],
+        'Yuval Ofek · foldwisemagic@gmail.com'],
     ],
   },
 };
