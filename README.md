@@ -7,7 +7,7 @@ on Android. Add `?skin=samsung` or `?skin=ios` to the address to force one (reme
 browser), for example to preview the Android look on an iPhone. The store apps live in the
 [foldwise](https://github.com/YuvalOfek1/foldwise-app) repo; this repo is a copy of their web code.
 
-**Site:** https://yuvalofek1.github.io/DFB-WEB/
+**Site:** https://yuvalofek1.github.io/TRICK-WEB/
 
 ## Setup (once)
 
